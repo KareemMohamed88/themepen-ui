@@ -80,14 +80,14 @@ const ProductsList = () => {
                       </div>
                     </div>
                     <div className="pt-5 pb-2.5 flex px-3 justify-between items-center text-black dark:text-slate-300">
-                      <h4
+                      <p
                         className="hover:underline"
                         onClick={() => {
                           token ? redirect(`/project-detalis/${data._id}`) : toast.error("you are is not a member please login")
                         }}
                       >
                         {data.title}
-                      </h4>
+                      </p>
                       <small className="text-black dark:text-slate-300 text-base flex justify-center">
                         price:{" "}
                         <span className="ml-1">
