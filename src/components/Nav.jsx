@@ -91,7 +91,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
                 <small>{wishList.wishListItems.length}</small>
               </a>
             )}
-            <button role="button" id="changeTheme" onClick={() => {
+            <button role="button" id={darkMode} onClick={() => {
               localStorage.setItem("theme", darkMode === "light" ? "dark" : "light")
               setDarkMode(darkMode === "light" ? "dark" : "light")
             }} >
