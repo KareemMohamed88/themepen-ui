@@ -35,7 +35,8 @@ module.exports = {
       },
       colors: {
         mainColor: "#4e67eb",
-        darkBg: "#1d1d39"
+        darkBg: "#1d1d39",
+        bgColor: "#f4f5fa"
       },
       fontSize: {
         "60px": "45px",

@@ -83,7 +83,7 @@ const Profile = () => {
           date={data.date}
         />
         <form encType='multipart/form-data' onSubmit={handleUpdateUser}>
-          <h2 className='my-6 text-xl text-white'>Update your data</h2>
+          <h2 className='my-6 text-xl text-slate-800 dark:text-white'>Update your data</h2>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
             <div>
               <h5 className='mb-2 dark:text-white'>First name</h5>
