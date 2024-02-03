@@ -130,7 +130,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
                 <small>{wishList.wishListItems.length}</small>
               </a>
             )}
-            <button role="button" id="openMenu" className={darkMode === "light" ? `text-white ${color && "text-inherit"}` : `text-black ${color && "text-inherit"}`} onClick={handleOpenMobileMenu}>
+            <button role="menuActive" id="menuActive" className={darkMode === "light" ? `text-white ${color && "text-inherit"}` : `text-black ${color && "text-inherit"}`} onClick={handleOpenMobileMenu}>
               <ion-icon name="grid-sharp"></ion-icon>
             </button>
           </div>
@@ -157,7 +157,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
             <li className="my-7 py-3 w-full">
               <NavLink className={(({ isActive }) => `text-slate-900 dark:text-white w-full border-l-8 pl-4 py-3 ${isActive && "border-mainColor"}`)} to={"/profile"}>Profile</NavLink>
             </li>
-            <div className="flex flex-col items-start gap-5 p-3">
+            <li className="flex flex-col items-start gap-5 p-3">
               <button role="button" id="changeTheme" onClick={() => {
                 localStorage.setItem("theme", darkMode === "light" ? "dark" : "light")
                 setDarkMode(darkMode === "light" ? "dark" : "light")
@@ -169,7 +169,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
                   <a className={buttonStyles} href="/login">Login</a>
                   <a className={buttonStyles} href="/signin">signin</a>
                 </React.Fragment>}
-            </div>
+            </li>
           </ul>
         </nav>
       </div>
