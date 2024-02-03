@@ -8,7 +8,7 @@ const Foot = () => {
       <div className="p-8 border-b dark:border-slate-400/20">
         <img
           width="200px"
-          className="object-contain"
+          className="logo"
           height="100px"
           src={require(darkMode === "light" ? "../assets/Logo-dark.png" : "../assets/Logo.png")}
           alt="logo"

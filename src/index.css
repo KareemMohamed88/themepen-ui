@@ -28,6 +28,10 @@ p {
   font-weight: 500;
 }
 
+.logo{
+  aspect-ratio: 1/2;
+}
+
 input, textarea, select{
   @apply bg-white dark:bg-gray-800/60 text-black dark:text-white py-3
 }
