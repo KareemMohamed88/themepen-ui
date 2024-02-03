@@ -50,12 +50,12 @@ const Nav = ({ darkMode, setDarkMode }) => {
             {darkMode === "light" ? (
               <img
                 width="200px"
-                height={"100px"}
+                height="100px"
                 src={require("../assets/Logo-dark.png")}
                 alt="logo"
               />) : (<img
                 width="200px"
-                height={"100px"}
+                height="100px"
                 src={require("../assets/Logo.png")}
                 alt="logo"
               />)}
@@ -122,12 +122,12 @@ const Nav = ({ darkMode, setDarkMode }) => {
             {darkMode === "light" ? (
               <img
                 width="200px"
-                height={"100px"}
+                height="100px"
                 src={require("../assets/Logo-dark.png")}
                 alt="logo"
               />) : (<img
                 width="200px"
-                height={"100px"}
+                height="100px"
                 src={require("../assets/Logo.png")}
                 alt="logo"
               />)}
