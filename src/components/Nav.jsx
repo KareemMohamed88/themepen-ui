@@ -47,18 +47,12 @@ const Nav = ({ darkMode, setDarkMode }) => {
             to="/"
             className="text-xl flex items-center text-inherit font-bold"
           >
-            {darkMode === "light" ? (
-              <img
+            <img
                 width="200px"
                 height="100px"
-                src={require("../assets/Logo-dark.png")}
+                src={require(darkMode === "light" ?  "../assets/Logo-dark.png" : "../assets/Logo.png")}
                 alt="logo"
-              />) : (<img
-                width="200px"
-                height="100px"
-                src={require("../assets/Logo.png")}
-                alt="logo"
-              />)}
+              />
           </NavLink>
           <nav>
             <ul>
@@ -119,18 +113,13 @@ const Nav = ({ darkMode, setDarkMode }) => {
             to="/"
             className="text-xl flex items-center text-inherit font-bold"
           >
-            {darkMode === "light" ? (
+            
               <img
                 width="200px"
                 height="100px"
-                src={require("../assets/Logo-dark.png")}
+                src={require(darkMode === "light" ?  "../assets/Logo-dark.png" : "../assets/Logo.png")}
                 alt="logo"
-              />) : (<img
-                width="200px"
-                height="100px"
-                src={require("../assets/Logo.png")}
-                alt="logo"
-              />)}
+              />
           </NavLink>
           <div className="flex items-center gap-x-5">
             {token && (
