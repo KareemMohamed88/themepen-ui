@@ -50,11 +50,11 @@ const Nav = ({ darkMode, setDarkMode }) => {
             {darkMode === "light" ? (
               <img
                 width="200px"
-                src={new URL("../assets/Logo-dark.png", import.meta.url).href}
+                src={require("../assets/Logo-dark.png")}
                 alt="logo"
               />) : (<img
                 width="200px"
-                src={new URL("../assets/Logo.png", import.meta.url).href}
+                src={require("../assets/Logo.png")}
                 alt="logo"
               />)}
           </NavLink>
