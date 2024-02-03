@@ -42,7 +42,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
             : "bar bg-transparent text-black dark:text-white"
         }
       >
-        <div className="desktop-nav w-100% hidden md:flex items-center justify-between h-24 px-8" data-aos="fade-down">
+        <div className="desktop-nav w-100% items-center justify-between h-24 px-8" data-aos="fade-down">
           <NavLink
             to="/"
             className="text-xl flex items-center text-inherit font-bold"
@@ -109,7 +109,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
             : "bar bg-transparent text-black dark:text-white"
         }
       >
-        <div className="mobile-nav w-100% px-6 h-24 bg-transparent flex md:hidden items-center justify-between" data-aos="fade-down">
+        <div className="mobile-nav w-100% px-6 h-24 bg-transparent items-center justify-between" data-aos="fade-down">
           <NavLink
             to="/"
             className="text-xl flex items-center text-inherit font-bold"

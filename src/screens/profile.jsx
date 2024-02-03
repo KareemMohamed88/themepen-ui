@@ -25,7 +25,7 @@ const Profile = () => {
     })
   }
   const getUserData = async () => {
-    const res = await Axios.get(`https://v2-server.onrender.com/users/getuser/${id._id}`)
+    const res = await Axios.get(`https://v2-server.onrender.com/users/getuser/${id.user._id}`)
     if(!res.data){
       setError(true)
     }else{

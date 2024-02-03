@@ -29,7 +29,7 @@ p {
 }
 
 .logo{
-  aspect-ratio: 1/2;
+  aspect-ratio: 4/1;
 }
 
 input, textarea, select{
@@ -161,4 +161,22 @@ background: transparent;
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #6366f1;
+}
+
+.desktop-nav{
+  display: flex;
+}
+
+.mobile-nav{
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .desktop-nav{
+    display: none;
+  }
+  
+  .mobile-nav{
+    display: flex;
+  }
 }

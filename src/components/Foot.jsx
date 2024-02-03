@@ -13,25 +13,25 @@ const Foot = () => {
           src={require(darkMode === "light" ? "../assets/Logo-dark.png" : "../assets/Logo.png")}
           alt="logo"
         />
-        <ul className="mt-4">
-          <li className="inline-block mr-4 text-inherit relative hover:text-mainColor">
-            <NavLink className={({ isActive }) => isActive && "text-white bg-mainColor px-4 py-2 rounded"} to="/">
+        <ul className="flex flex-wrap gap-y-3 mt-4">
+          <li className="inline-block text-inherit relative hover:text-mainColor">
+            <NavLink className={({ isActive }) => `px-4 mb-5 ${isActive && "text-white bg-mainColor px-4 py-2 rounded"}`} to="/">
               Home
             </NavLink>
           </li>
-          <li className="inline-block mr-4 text-inherit relative hover:text-mainColor">
-            <NavLink className={({ isActive }) => isActive && "text-white bg-mainColor px-4 py-2 rounded"} to="/contact">
+          <li className="inline-block text-inherit relative hover:text-mainColor">
+            <NavLink className={({ isActive }) => `px-4 mb-5 ${isActive && "text-white bg-mainColor px-4 py-2 rounded"}`} to="/contact">
               Contact us
             </NavLink>
           </li>
-          <li className="inline-block mr-4 text-inherit relative hover:text-mainColor">
-            <NavLink className={({ isActive }) => isActive && "text-white bg-mainColor px-4 py-2 rounded"} to="/install">
+          <li className="inline-block text-inherit relative hover:text-mainColor">
+            <NavLink className={({ isActive }) => `px-4 mb-5 ${isActive && "text-white bg-mainColor px-4 py-2 rounded"}`} to="/install">
               installation
             </NavLink>
           </li>
           {token && (
-            <li className="inline-block mr-4 text-inherit relative hover:text-mainColor">
-              <NavLink className={({ isActive }) => isActive && "text-mainColor"} to="/profile">
+            <li className="inline-block text-inherit relative hover:text-mainColor">
+              <NavLink className={({ isActive }) => `px-4 mb-5 ${isActive && "text-white bg-mainColor px-4 py-2 rounded"}`} to="/profile">
                 profile
               </NavLink>
             </li>
