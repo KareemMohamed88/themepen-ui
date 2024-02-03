@@ -59,7 +59,7 @@ const ComponentsGrid = () => {
             </div>
             <div className="comp col-span-1 md:col-span-2 md:row-span-3 md:col-start-1 md:row-start-3 bg-indigo-600 h-fit hover:scale-110 ease-in duration-300 rounded-xl overflow-hidden ">
                 <div className='w-full h-1/2 flex items-center justify-center'>
-                    <img src={require("../assets/card-img.jpg")} alt="" />
+                    <img className="object-contain" src={require("../assets/card-img.jpg")} alt="" />
                 </div>
                 <div className='p-4'>
                     <h2 className='text-white mb-2'>Card heading</h2>

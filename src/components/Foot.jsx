@@ -6,16 +6,13 @@ const Foot = () => {
   return (
     <div className="footer w-100% bg-white text-slate-800 dark:bg-slate-900 dark:text-white">
       <div className="p-8 border-b dark:border-slate-400/20">
-        {darkMode === "light" ? (
-          <img
-            width="200px"
-            src={"https://i.postimg.cc/8zDVjwR5/Logo-dark.png"}
-            alt="logo"
-          />) : (<img
-            width="200px"
-            src={"https://i.postimg.cc/kMxWJnqW/Logo-1.png"}
-            alt="logo"
-          />)}
+        <img
+          width="200px"
+          className="object-contain"
+          height="100px"
+          src={require(darkMode === "light" ? "../assets/Logo-dark.png" : "../assets/Logo.png")}
+          alt="logo"
+        />
         <ul className="mt-4">
           <li className="inline-block mr-4 text-inherit relative hover:text-mainColor">
             <NavLink className={({ isActive }) => isActive && "text-white bg-mainColor px-4 py-2 rounded"} to="/">

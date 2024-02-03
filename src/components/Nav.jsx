@@ -50,6 +50,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
             <img
                 width="200px"
                 height="100px"
+                className="object-contain"
                 src={require(darkMode === "light" ?  "../assets/Logo-dark.png" : "../assets/Logo.png")}
                 alt="logo"
               />
@@ -116,6 +117,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
             
               <img
                 width="200px"
+                className="object-contain"
                 height="100px"
                 src={require(darkMode === "light" ?  "../assets/Logo-dark.png" : "../assets/Logo.png")}
                 alt="logo"
