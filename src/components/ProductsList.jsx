@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../projects/wishListSlice";
 import Axios from "axios";
 import BarLoader from "react-spinners/BarLoader";
+import Card from "./card"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-hot-toast";
 import { useGetAllProjectsQuery } from "../projects/projectApi"
 const ProductsList = () => {
   useEffect(() => {
@@ -35,7 +35,7 @@ const ProductsList = () => {
   }
 
   return (
-    <div className="pt-7">
+    <div className="pt-7 bg-speceficSection">
       <div className="container mx-auto px-5">
         <label
           htmlFor="categories"
@@ -64,51 +64,9 @@ const ProductsList = () => {
                 } else if (data.title.toLowerCase().includes(project.toLowerCase())) {
                   return data;
                 }
-              }).map((data) => {
-                return (
-                  <div key={data._id} className="bg-white dark:bg-slate-800 shadow-cardShadow dark:shadow-darkCardShadow" data-aos="zoom-in">
-                    <div className="overflow-hidden">
-                      <div className="relative" onClick={() => {
-                        token ? redirect(`/project-detalis/${data._id}`) : toast.error("you are is not a member please login")
-                      }}>
-                        <img
-                          className="object-cover object-center w-full"
-                          src={data.picture}
-                          alt="faild"
-                        />
-                        <div className="absolute right-2 top-2 px-4 py-1 text-white bg-mainColor/90 rounded-sm text-xs">Sold: {data.sold}</div>
-                      </div>
-                    </div>
-                    <div className="pt-5 pb-2.5 flex px-3 justify-between items-center text-black dark:text-slate-300">
-                      <p
-                        className="hover:underline"
-                        onClick={() => {
-                          token ? redirect(`/project-detalis/${data._id}`) : toast.error("you are is not a member please login")
-                        }}
-                      >
-                        {data.title}
-                      </p>
-                      <small className="text-black dark:text-slate-300 text-base flex justify-center">
-                        price:{" "}
-                        <span className="ml-1">
-                          {data.price <= 0 ? "free" : `${data.price}$`}
-                        </span>
-                      </small>
-                    </div>
-                    <div className="pt-6 pb-3 px-3 flex items-center justify-between">
-                      <div>
-                        <button aria-label={`redirectToDetalis-${data._id}`} id={`redirectToDetalis-${data._id}`} className="cursor-pointer mr-3 bg-mainColor px-5 text-sm h-10 text-white font-bold rounded" onClick={() => {
-                          token ? redirect(`/project-detalis/${data._id}`) : toast.error("you are is not a member please login")
-                        }}>Learn more</button>
-                        <button aria-label={`addToWishList-${data._id}`} id={`addToWishList-${data._id}`} className="cursor-pointer bg-yellow-500 px-5 text-sm h-10 text-white font-bold rounded" onClick={() => {
-                          handleAddToWishList(data)
-                        }}><i class="fa-solid fa-bookmark"></i> </button>
-                      </div>
-                      <p className="font-bold text-sm text-slate-500 dark:text-slate-300">{data.date}</p>
-                    </div>
-                  </div>
-                )
-              })}
+              }).map((data) => (
+                  <Card data={data} ID={data._id} title={data.title} price={data.price} picture={data.picture} sold={data.sold} date={data.date} handleAddToWishList={handleAddToWishList}/>
+              ))}
             </div> : status === "pending" ? (
               <div className="w-full py-6 flex justify-center items-center">
                 <BarLoader color="#4e67eb" />

@@ -35,6 +35,7 @@ module.exports = {
       },
       colors: {
         mainColor: "#4e67eb",
+        speceficSection: "#e7e8fa",
         darkBg: "#1d1d39",
         bgColor: "#f4f5fa"
       },
