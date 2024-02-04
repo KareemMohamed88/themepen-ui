@@ -2,7 +2,7 @@ import React from 'react'
 
 const cards = () => {
   return (
-    <div className='cards bg-speceficSection dark:bg-indigo-900/30 w-full py-36'>
+    <div className='cards bg-speceficSection dark:bg-indigo-900/20 w-full py-36'>
       <div className='container mx-auto grid gap-5 items-center grid-cols-1 md:grid-cols-2'>
         <div className='z-10 flex items-center flex-col md:-mt-52'>
           <span className='-mt-20 mb-10 text-9xl text-slate-300'>,,</span>

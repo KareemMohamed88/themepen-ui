@@ -48,12 +48,12 @@ const Nav = ({ darkMode, setDarkMode }) => {
             className="text-xl flex items-center text-inherit font-bold"
           >
             <img
-                width="200px"
-                height="100px"
-                className="logo"
-                src={require(darkMode === "light" ?  "../assets/Logo-dark.png" : "../assets/Logo.png")}
-                alt="logo"
-              />
+              width="200px"
+              height="100px"
+              className="logo"
+              src={require(darkMode === "light" ? "../assets/Logo-dark.png" : "../assets/Logo.png")}
+              alt="logo"
+            />
           </NavLink>
           <nav>
             <ul>
@@ -74,7 +74,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
               </li>
               {token && (
                 <li className="inline-block mx-4 text-inherit relative hover:text-mainColor">
-                  <NavLink className={({ isActive }) => isActive && "text-mainColor"} to="/profile">
+                  <NavLink className={({ isActive }) => isActive && "text-white bg-mainColor px-4 py-2 rounded"} to="/profile">
                     profile
                   </NavLink>
                 </li>
@@ -114,14 +114,14 @@ const Nav = ({ darkMode, setDarkMode }) => {
             to="/"
             className="text-xl flex items-center text-inherit font-bold"
           >
-            
-              <img
-                width="200px"
-                className="logo"
-                height="100px"
-                src={require(darkMode === "light" ?  "../assets/Logo-dark.png" : "../assets/Logo.png")}
-                alt="logo"
-              />
+
+            <img
+              width="200px"
+              className="logo"
+              height="100px"
+              src={require(darkMode === "light" ? "../assets/Logo-dark.png" : "../assets/Logo.png")}
+              alt="logo"
+            />
           </NavLink>
           <div className="flex items-center gap-x-5">
             {token && (
