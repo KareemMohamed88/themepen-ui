@@ -25,7 +25,7 @@ const Profile = () => {
     })
   }
   const getUserData = async () => {
-    const res = await Axios.get(`https://v2-server.onrender.com/users/getuser/${id._id}`)
+    const res = await Axios.get(`https://v2-server.onrender.com/users/getuser/${id.user._id}`)
     if(!res.data){
       setError(true)
     }else{
@@ -43,7 +43,7 @@ const Profile = () => {
     formData.append("profilePicture", userData.profilePicture);
 
     try {
-      const fetch = await Axios.put(`https://v2-server.onrender.com/v2-server/user/update/${id._id}`, formData);
+      const fetch = await Axios.put(`https://v2-server.onrender.com/v2-server/user/update/${id.user._id}`, formData);
       localStorage.setItem("user-data", JSON.stringify(fetch.data))
       toast.success("user updated successfully")
     } catch (err) {
