@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-hot-toast";
+import {toast} from "react-hot-toast";
 
-const Card = ({ data, ID, title, price, picture, sold, date, toast, handleAddToWishList }) => {
+const Card = ({ data, ID, title, price, picture, sold, date, handleAddToWishList }) => {
     const redirect = useNavigate()
     const token = localStorage.getItem("token")
     return (

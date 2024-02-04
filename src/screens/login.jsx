@@ -34,9 +34,9 @@ const Login = () => {
         email: "",
         password: ""
       })
-      window.location.reload()
       localStorage.setItem("token", res.data.token)
-      localStorage.setItem("user-data", JSON.stringify(res.data))
+      localStorage.setItem("user-id", JSON.stringify(res.data._id))
+      window.location.reload()
     }).catch((err) => {
       toast.error(err.response.data.message)
       console.log(err)

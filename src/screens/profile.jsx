@@ -6,7 +6,7 @@ import ProfileWidget from './widgets/ProfileWidget';
 import { Helmet } from 'react-helmet-async';
 
 const Profile = () => {
-  const id = JSON.parse(localStorage.getItem("user-data"))
+  const id = JSON.parse(localStorage.getItem("user-id"))
   const [userData, setUserData] = useState({
     firstName: "",
     lastName: "",

@@ -40,7 +40,7 @@ const Registeration = () => {
 
 
     await Axios.post('https://v2-server.onrender.com/v2-server/auth/register', formData).then((res) => {
-      localStorage.setItem("user-data", JSON.stringify(res.data))
+      localStorage.setItem("user-id", JSON.stringify(res.data._id))
       toast.success("user created successfully")
       redirect("/login")
     }).catch((err) => {
