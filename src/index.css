@@ -240,7 +240,7 @@ background: transparent;
     max-width: 70%;
   }
   .cards::before{
-    height: 650px;
+    height: 530px;
     width: 600px;
     max-width: 70%;
 
