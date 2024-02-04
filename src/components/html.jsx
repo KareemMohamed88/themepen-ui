@@ -22,7 +22,7 @@ const Html = () => {
   return (
     <div className='container mx-auto px-5 grid grid-cols-1 md:grid-cols-12 gap-10 my-12'>
       <div className='col-span-1 md:col-span-2'>
-        <h2 className='mb-6'>Template in {filterType}</h2>
+        <h2 className='mb-6 dark:text-white'>Template in {filterType}</h2>
         <ul className='flex md:block flex-wrap gap-5'>
           {categories.map((item) => (
             <li className='mb-2'>
