@@ -44,7 +44,7 @@ const ProductsList = () => {
           Select an option
         </label>
         <input
-          className="text-slate-800 dark:text-white bg-white dark:bg-slate-800/20 border-gray-300 text-sm rounded-lg block w-full p-2.5 md:w-30% outline-none"
+          className="text-slate-800 dark:text-white bg-white dark:bg-slate-800 border-gray-300 text-sm rounded-lg block w-full p-2.5 md:w-30% outline-none"
           name="category-list"
           id="category-list"
           type="search"
@@ -58,14 +58,14 @@ const ProductsList = () => {
         <div className="container projects-container py-12 mx-auto px-5">
           {status === "success" ?
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {data?.filter(data => {
+              {data?.slice(0, productsPerPage).filter(data => {
                 if (project === '') {
                   return data;
                 } else if (data.title.toLowerCase().includes(project.toLowerCase())) {
                   return data;
                 }
               }).map((data) => (
-                  <Card data={data} ID={data._id} title={data.title} price={data.price} picture={data.picture} sold={data.sold} date={data.date} handleAddToWishList={handleAddToWishList}/>
+                <Card data={data} ID={data._id} title={data.title} price={data.price} picture={data.picture} sold={data.sold} date={data.date} handleAddToWishList={handleAddToWishList} />
               ))}
             </div> : status === "pending" ? (
               <div className="w-full py-6 flex justify-center items-center">
@@ -83,7 +83,7 @@ const ProductsList = () => {
           <button
             id="showMore"
             onClick={handleMoreProductsPerPage}
-            className="py-1.5 px-6 bg-indigo-600 font-bold text-white cursor-pointer"
+            className="py-1.5 px-6 bg-mainColor font-bold text-white cursor-pointer"
           >
             Show more
           </button>

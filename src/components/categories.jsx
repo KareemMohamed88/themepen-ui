@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useGetAllProjectsQuery } from "../projects/projectApi"
 import { addToCart } from "../projects/wishListSlice";
 
-const Html = () => {
+const Categories = () => {
   const [filterType, setFilterType] = useState("Html")
   const [currentType, setCurrenttype] = useState(filterType)
   const [categories, setCategories] = useState([
@@ -35,7 +35,7 @@ const Html = () => {
         </ul>
       </div>
          <div className='grid grid-cols-1 md:grid-cols-3 gap-5 col-span-1 md:col-span-10'>
-         {data?.filter(data => data.category === filterType ).map((data) => (
+         {data?.slice(0,6).filter(data => data.category === filterType ).map((data) => (
            <Card data={data} ID={data._id} title={data.title} price={data.price} picture={data.picture} sold={data.sold} date={data.date} handleAddToWishList={handleAddToWishList} />
          ))}
        </div>
@@ -43,4 +43,4 @@ const Html = () => {
   )
 }
 
-export default Html
+export default Categories

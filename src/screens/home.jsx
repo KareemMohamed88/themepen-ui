@@ -3,7 +3,7 @@ import ProductsList from "../components/ProductsList";
 import Hero from './../components/hero';
 import Cards from "../components/cards";
 import { Helmet } from 'react-helmet-async';
-import Html from './../components/html';
+import Categories from './../components/categories';
 
 const Home = () => {
 
@@ -15,7 +15,7 @@ const Home = () => {
       </Helmet>
       <Hero />
       <Cards/>
-      <Html/>
+      <Categories/>
       <ProductsList />
       <Footer />
     </>
