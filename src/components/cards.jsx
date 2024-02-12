@@ -6,7 +6,7 @@ const cards = () => {
       <div className='container mx-auto grid gap-5 items-center grid-cols-1 md:grid-cols-2'>
         <div className='z-10 w-full flex items-center mx-auto flex-col md:-mt-52'>
           <span className='-mt-20 mb-10 text-9xl text-slate-300'>,,</span>
-          <h1 className='md:-ml-10 font-sans text-4xl dark:text-white text-center md:text-start'>What we are <br /> providing for you <span className='text-6xl text-mainColor'>.</span></h1>
+          <h1 className='md:-ml-10 font-sans text-4xl text-slate-800 text-center md:text-start'>What we are <br /> providing for you <span className='text-6xl text-mainColor'>.</span></h1>
         </div>
         <div className='z-10 h-full grid gap-5 grid-cols-1 md:grid-cols-2'>
           <div className='card rounded-md h-52 bg-mainColor p-3 flex flex-col justify-center gap-y-5'>

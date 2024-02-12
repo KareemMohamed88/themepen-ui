@@ -38,8 +38,13 @@ const Foot = () => {
           )}
         </ul>
       </div>
-      <div className="p-8">
+      <div className="p-8 flex items-center justify-between flex-col">
         <h3 className="mb-2 font-sans">&copy; Themepen, All rights reserved</h3>
+        <ul className="flex gap-7">
+            <li><NavLink className="text-slate-100 text-sm cursor-pointer" to="https://www.facebook.com/themepen/"><i class="fa-brands fa-facebook-f"></i></NavLink></li>
+            <li><NavLink className="text-slate-100 text-sm cursor-pointer" to="https://www.instagram.com/themepen/"><i class="fa-brands fa-instagram"></i></NavLink></li>
+            <li><NavLink className="text-slate-100 text-sm cursor-pointer" to="https://pin.it/3HNghSj5U"><i class="fa-brands fa-pinterest-p"></i></NavLink></li>
+          </ul>
       </div>
     </div>
   );

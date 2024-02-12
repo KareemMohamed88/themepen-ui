@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useSelector } from 'react-redux'
+import NavLinks from "./NavLinks";
 const Nav = ({ darkMode, setDarkMode }) => {
   useEffect(() => {
     AOS.init()
@@ -42,7 +43,8 @@ const Nav = ({ darkMode, setDarkMode }) => {
             : "bar bg-transparent text-black dark:text-white"
         }
       >
-        <div className="desktop-nav w-100% items-center justify-between h-24 px-8" data-aos="fade-down">
+         <NavLinks/>
+        <div className="border-b border-slate-200/20 desktop-nav w-100% items-center justify-between h-24 px-8" data-aos="fade-down">
           <NavLink
             to="/"
             className="text-xl flex items-center text-inherit font-bold"
@@ -109,6 +111,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
             : "bar bg-transparent text-black dark:text-white"
         }
       >
+        <NavLinks/>
         <div className="mobile-nav w-100% px-6 h-24 bg-transparent items-center justify-between" data-aos="fade-down">
           <NavLink
             to="/"
@@ -173,7 +176,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
           </ul>
         </nav>
       </div>
-      <div className="h-20 md:h-24"></div>
+      <div className="h-28 md:h-40"></div>
     </React.Fragment>
   );
 };

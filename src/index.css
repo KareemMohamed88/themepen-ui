@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @font-face {
   font-family: nasalization;
   src: url("./nasalization-rg.otf");
@@ -34,6 +34,10 @@ p {
 
 input, textarea, select{
   @apply bg-white dark:bg-gray-800/60 text-black dark:text-white py-3
+}
+
+.nav-links{
+  z-index: 99999;
 }
 
 .bar {
@@ -176,12 +180,12 @@ ion-icon {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f2f3;
+  background: #152a38;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #4e67eb;
 }
 
 .wishList-table::-webkit-scrollbar-track {
