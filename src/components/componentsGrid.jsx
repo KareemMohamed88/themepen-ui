@@ -28,7 +28,7 @@ const ComponentsGrid = () => {
                     <i class="fa-solid fa-check"></i>
                 </span>
             </div>
-            <div className="comp col-span-1 md:col-span-3 md:col-start-3 md:-start-1 bg-slate-50 hover:bg-slate-200 rounded-xl p-4 h-fit  dark:bg-slate-800 dark:hover:bg-slate-900 md:translate-x-5 ">
+            <div className="comp col-span-1 md:col-span-3 md:col-start-3 md:-start-1 bg-slate-50 hover:bg-slate-200 rounded-xl p-4 h-fit  dark:bg-slate-800 dark:hover:bg-slate-900 md:translate-x-2 ">
                 <div className='flex items-center gap-2'>
                     <span className='rounded-full p-3 flex items-center justify-center bg-emerald-500 text-white'>
                         <i class="fa-solid fa-chart-simple"></i>

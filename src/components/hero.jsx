@@ -10,7 +10,7 @@ const Hero = () => {
   }, []) 
   return (
     <div className="header py-32  min-h-screen max-h-fit">
-      <div className="grid grid-cols-1 md:flex md:justify-between items-center lg:container m-auto px-5 gap-y-14">
+      <div className="grid grid-cols-1 md:flex md:justify-between items-center m-auto px-5 gap-y-14">
         <div className="space-y-6 col-span-1 md:pt-0 w-full z-40 md:w-2/4" data-aos="fade-up">
           <h1 className="md:text-6xl text-4xl max-[360px]:text-3xl text-gray-700 dark:text-gray-100">
             You always must <span className="text-mainColor font-medium">Have Ideas.</span>

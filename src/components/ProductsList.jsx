@@ -24,6 +24,10 @@ const ProductsList = () => {
     setProductsPerPage((productsPerPage) => productsPerPage + 6);
   };
 
+  const handleLesProductsPerPage = () => {
+    setProductsPerPage((productsPerPage) => productsPerPage - 6);
+  };
+
   const handleAddToWishList = (project) => {
     dispatch(addToCart(project))
   }
@@ -78,7 +82,15 @@ const ProductsList = () => {
 
         </div>
       </div>
-      {data?.length > 6 ? (
+      {productsPerPage > data.length ?   <div className="flex justify-center pb-12">
+          <button
+            id="showMore"
+            onClick={handleLesProductsPerPage}
+            className="py-1.5 px-6 bg-mainColor font-bold text-white cursor-pointer"
+          >
+            Show less
+          </button>
+        </div> : data?.length > 6 ? (
         <div className="flex justify-center pb-12">
           <button
             id="showMore"
