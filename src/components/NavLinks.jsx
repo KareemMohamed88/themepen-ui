@@ -17,8 +17,8 @@ const NavLinks = () => {
         <div className="nav-links bg-mainColor w-full px-8 py-1 flex justify-between items-center">
             <p className="text-white">Hello: {data.firstName}</p>
             <ul className="flex gap-7">
-                <li><NavLink className="text-slate-100 text-sm cursor-pointer" to="https://www.facebook.com/themepen?mibextid=2JQ9oc"><i class="fa-brands fa-facebook-f"></i></NavLink></li>
-                <li><NavLink className="text-slate-100 text-sm cursor-pointer" to="https://www.instagram.com/themepen?igsh=MWZiYzludmdtNGluMA=="><i class="fa-brands fa-instagram"></i></NavLink></li>
+                <li><NavLink className="text-slate-100 text-sm cursor-pointer" to=""><i class="fa-brands fa-facebook-f"></i></NavLink></li>
+                <li><NavLink className="text-slate-100 text-sm cursor-pointer" to=""><i class="fa-brands fa-instagram"></i></NavLink></li>
                 <li><NavLink className="text-slate-100 text-sm cursor-pointer" to="https://pin.it/2tbnAvq1E"><i class="fa-brands fa-pinterest-p"></i></NavLink></li>
             </ul>
         </div>
