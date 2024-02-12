@@ -14,7 +14,6 @@ const Home = () => {
         <meta name="description" content="theme pen home page" />
       </Helmet>
       <Hero />
-      <Cards/>
       <Categories/>
       <ProductsList />
       <Footer />
