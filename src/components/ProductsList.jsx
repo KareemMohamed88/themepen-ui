@@ -39,7 +39,7 @@ const ProductsList = () => {
   }
 
   return (
-    <div className="pt-7 bg-speceficSection dark:bg-indigo-900/20">
+    <div className="pt-7">
       <div className="container mx-auto px-5">
         <label
           htmlFor="categories"
