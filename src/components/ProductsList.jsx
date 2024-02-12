@@ -82,7 +82,7 @@ const ProductsList = () => {
 
         </div>
       </div>
-      {productsPerPage > data.length ?   <div className="flex justify-center pb-12">
+      {productsPerPage > data?.length ?   <div className="flex justify-center pb-12">
           <button
             id="showMore"
             onClick={handleLesProductsPerPage}
