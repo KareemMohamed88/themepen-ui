@@ -11,7 +11,8 @@ const profile = ({
   return (
     <div className="h-full">
       <header className="relative mb-12">
-        <img className="h-56 w-full rounded-xl" src={profilePicture} alt="" />
+
+        <div className="h-56 w-full rounded-xl" style={{backgroundImage: `url(${profilePicture})`, backgroundSize: "cover", backgroundPosition: "50%"}}></div>
         <img
           className="w-16 h-16 rounded-full absolute -bottom-8 left-5 border-4 border-white"
           src={picture}
