@@ -4,7 +4,7 @@ const Foot = () => {
   const token = localStorage.getItem("token")
   const darkMode = localStorage.getItem("theme")
   return (
-    <div className="footer w-100% bg-white text-slate-800 dark:bg-slate-900 dark:text-white">
+    <div className="footer w-100% bg-white text-slate-800 dark:bg-slate-900 dark:text-white pt-28">
       <div className="p-8 border-b dark:border-slate-400/20">
         <img
           width="200px"

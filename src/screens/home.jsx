@@ -4,18 +4,20 @@ import Hero from './../components/hero';
 import Cards from "../components/cards";
 import { Helmet } from 'react-helmet-async';
 import Categories from './../components/categories';
+import FollowUs from "../components/FollowUs";
 
 const Home = () => {
 
   return (
     <>
       <Helmet>
-        <title>Home page</title>
+        <title>Themepen</title>
         <meta name="description" content="theme pen home page" />
       </Helmet>
       <Hero />
       <Categories/>
       <ProductsList />
+      <FollowUs/>
       <Footer />
     </>
   );
