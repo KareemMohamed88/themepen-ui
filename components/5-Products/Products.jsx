@@ -1,5 +1,4 @@
 import useFetchApi from "@/hooks/useFetchApi"
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode } from "react"
 import FadeLoader from "react-spinners/FadeLoader";
 export default function ProductsList() {
     const [data, loading] = useFetchApi("https://v2-server.onrender.com/projects")
@@ -8,8 +7,7 @@ export default function ProductsList() {
             <div className="container">
                 <h1 className="text-white text-5xl">Latest Products</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-                
-                    {loading ? <FadeLoader className="mx-auto" color="#fff" /> : data?.slice(0, 4).map((item: { picture: string | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined; date: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined; description: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined }) => (
+                    {loading ? <FadeLoader className="mx-auto" color="#fff" /> : data?.slice(0, 4).map((item) => (
                         <div className="space-y-10 rounded overflow-hidden">
                             <div className="w-full gap-10">
                                 <div className="h-full w-full cols-span-1">

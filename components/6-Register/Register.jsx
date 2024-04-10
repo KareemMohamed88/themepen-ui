@@ -13,7 +13,7 @@ const Register = () => {
         picture: ""
     })
     const { username, email, password, picture } = userData
-    const handleRegister = async (e: { preventDefault: () => void }) => {
+    const handleRegister = async (e) => {
       e.preventDefault()  
       const formData = new FormData()
         formData.append("username", userData.username)
@@ -22,8 +22,8 @@ const Register = () => {
         formData.append("picture", userData.picture)
         await axios.post('https://v2-server.onrender.com/v2-server/auth/register', formData).then((res) => {
           toast.dark("user created successfully")
-          setCookie("jwt-authorization", response.data.token)
-        setCookie("user-profile", response.data.newUser)
+          setCookie("jwt-authorization", res.data.token)
+        setCookie("user-profile", res.data.newUser)
         }).catch((err) => {
           toast.dark(err?.response.data.message)
         })
@@ -51,7 +51,7 @@ const Register = () => {
                   <label className="w-full py-2 bg-indigo-500/20 rounded cursor-pointer" htmlFor="upload">
                     <h3 className="bg-indigo-500 text-white font-bold px-4 py-2 w-fit mx-auto rounded text-xs">UPLOAD <i className="ml-2 fa-solid fa-cloud-arrow-up"></i></h3>
                   </label>
-                  <input id="upload" className="hidden" onChange={(e) => setUserData({ ...userData, picture: e.target.files[0] })} type="file"/>
+                  <input id="upload" className="hidden" onChange={(e) => setUserData({ ...userData, picture: e.target.files && e.target.files[0] })} type="file"/>
                   <button className="bg-yellow-400 text-black h-10 rounded-full text-xs font-medium">REGISTER</button>
               </form>
           </div>

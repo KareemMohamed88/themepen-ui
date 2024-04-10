@@ -12,7 +12,7 @@ function Login({ setLoginModal }) {
         password: "",
     })
     const { email, password } = userData
-    const handleRegister = async (e: { preventDefault: () => void }) => {
+    const handleRegister = async (e) => {
         e.preventDefault()
         await axios.post("https://v2-server.onrender.com/auth/login", { ...userData }).then((res) => {
             setUserData({
