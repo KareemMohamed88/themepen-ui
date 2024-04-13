@@ -7,7 +7,7 @@ export default function ProductsList() {
             <div className="container">
                 <h1 className="text-white text-5xl">Latest Products</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-                    {loading ? <FadeLoader className="mx-auto" color="#fff" /> : data?.slice(0, 4).map((item) => (
+                    {loading ? <div className="w-full flex justify-center"><FadeLoader color="#fff" /></div> : data?.slice(0, 4).map((item) => (
                         <div className="space-y-10 rounded overflow-hidden">
                             <div className="w-full gap-10">
                                 <div className="h-full w-full cols-span-1">

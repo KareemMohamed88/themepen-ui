@@ -5,7 +5,7 @@ export default function Hero() {
         <div className="h-screen bg-peacefull">
             <div className="container grid place-items-center w-full h-full">
                 <div className="space-y-6">
-                    <p className="text-zinc-500 w-3/4">
+                    <p className="text-zinc-500 md:w-3/4 border-l-4 border-indigo-500 pl-3">
                         Theme Pen is a small global company his goal is sell high quality and cheap web templates for other companies or student and we have a big collection of web templates.
                     </p>
                     <h1 className="text-gray-700 text-4xl md:text-6xl">Creating Softweres & <br/> <span className="text-indigo-500">Website</span> Building <span className="text-indigo-500">Services</span></h1>

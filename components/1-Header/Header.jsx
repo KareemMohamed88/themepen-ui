@@ -49,7 +49,7 @@ export default function Header() {
                         </p>
                     </div>
                     }
-                    {token === null || undefined ? <div className="flex items-center gap-3">
+                    {!token? <div className="flex items-center gap-3">
                         <Link className="bg-indigo-500 text-white font-bold text-sm border-b-4 border-indigo-700 rounded-md px-4 py-2" href="#register">Sign in</Link>
                         <button onClick={() => setLoginModal(true)} className="bg-indigo-500 text-white font-bold text-sm border-b-4 border-indigo-700 rounded-md px-4 py-2">Login in</button>
                     </div> : null}
